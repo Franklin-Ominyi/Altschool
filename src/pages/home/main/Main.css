@@ -1,0 +1,82 @@
+.main-content {
+	position: relative;
+	top: 4rem;
+}
+
+.landing-page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 2.4rem;
+}
+
+.landing-page .texts-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.landing-page .texts-container .semi-bold {
+	width: 60%;
+	text-align: center;
+	margin: 20px 0;
+}
+
+.landing-page .btn-container .btn {
+	outline: none;
+	border-radius: 40px;
+	padding: 15px;
+	border: none;
+	margin: 10px;
+	background-color: #ed1c24;
+	color: white;
+	transition: background-color, color, 0.7s ease;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.landing-page .btn-container .btn:hover {
+	background-color: #000;
+}
+
+.landing-page .btn-container .btn:last-child {
+	background-color: white;
+	border: 1px solid #000;
+	color: black;
+}
+
+.landing-page .btn-container .btn:last-child:hover {
+	background-color: #000;
+	color: white;
+}
+
+.landing-page-image {
+	margin-bottom: 50px;
+}
+
+.landing-page img {
+	height: 500px;
+	width: 100%;
+}
+
+@media screen and (max-width: 760px) {
+	.landing-page {
+		margin-top: 3.4rem;
+	}
+
+	.landing-page .texts-container .semi-bold {
+		width: 95%;
+		margin: 20px 0;
+	}
+
+	.landing-page .btn-container button {
+		padding: 10px;
+		margin: 10px;
+	}
+
+	.landing-page img {
+		height: 400px;
+		width: 100%;
+	}
+}

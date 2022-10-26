@@ -1,0 +1,52 @@
+.list-users {
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+	top: 4rem;
+	min-height: 60vh;
+	margin-bottom: 7rem;
+	height: auto;
+}
+
+.list-users .info {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.list-users .info p {
+	color: #ed1c24;
+}
+
+.list-users h2 {
+	color: rgb(1, 1, 34);
+	font-size: 25px;
+}
+
+.list-users .list-item {
+	padding: 10px;
+	background-color: #ddd;
+	margin-bottom: 15px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.list-users .list-item img {
+	border-radius: 50%;
+}
+
+.list-users .list-item p {
+	color: black;
+	font-weight: bold;
+}
+
+.list-users .list-item .email {
+	color: gray;
+	font-weight: 600;
+}
+
+.list-users .pagination-wrapper {
+	margin-top: 25px;
+}

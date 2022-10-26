@@ -1,0 +1,57 @@
+.bold {
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.semi-bold {
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+
+.title {
+	font-size: 1.5rem;
+	font-weight: 600;
+	width: fit-content;
+	margin: 0 auto;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+	color: #ed1c24;
+	text-align: center;
+	position: relative;
+}
+
+.title::after {
+	content: "";
+	width: 75%;
+	height: 3px;
+	background-color: white;
+	position: absolute;
+	bottom: -10px;
+	right: 0px;
+}
+
+.max-width {
+	width: 90%;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 760px) {
+	.bold {
+		font-size: 1.4rem;
+		font-weight: 700;
+	}
+
+	.semi-bold {
+		font-size: 1rem;
+		font-weight: 500;
+	}
+
+	.title {
+		font-size: 1.2rem;
+		font-weight: 600;
+	}
+
+	.max-width {
+		width: 95%;
+	}
+}
