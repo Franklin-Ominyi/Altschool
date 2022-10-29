@@ -53,6 +53,16 @@
 				}
 				prevScrollPos = currentScrollPos;
 			};
+
+			// Add border bottom styling on scroll
+			$(window).scroll(function () {
+				let scroll = $(window).scrollTop();
+				if (scroll > 300) {
+					$(".navbar").css("border-bottom", "2px solid #ed1c24");
+				} else {
+					$(".navbar").css("border-bottom", "0px solid #ed1c24");
+				}
+			});
 		</script>
 	</body>
 </html>

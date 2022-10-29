@@ -12,7 +12,7 @@ const Navbar = ({ active }) => {
 
 	useEffect(() => {
 		document
-			.querySelector(".sidebar .smooth-scroll")
+			.querySelector(".sidebar a")
 			.addEventListener("click", toggleNavDisplay);
 		document
 			.querySelector(".mobile-menu")
@@ -29,19 +29,16 @@ const Navbar = ({ active }) => {
 					Users
 				</Link>
 				<Link to={"/test"}>Test Error Boundary</Link>
-				<Link className='smooth-scroll'>About</Link>
+				<Link to={"/nested"} className={active === "nested" ? " active" : ""}>
+					Nested Component
+				</Link>
 			</div>
 			<nav className='nav-container navbar'>
 				<div className='wrapper'>
 					<div className='brand-logo'>
-						<h1
-							className='semi-bold'
-							style={{ color: "#ed1c24", fontSize: "1.4rem" }}
-						>
-							<Link to='/'>
-								<img src={logo} alt='logo' />
-							</Link>
-						</h1>
+						<Link to='/'>
+							<img src={logo} alt='logo' />
+						</Link>
 					</div>
 					<ul className='desktop nav-links'>
 						<li>
@@ -50,15 +47,19 @@ const Navbar = ({ active }) => {
 							</Link>
 						</li>
 						<li>
-							<Link to={"/users"} className={active === "users" ? "active" : ""}>
+							<Link to='/users' className={active === "users" ? "active" : ""}>
 								Users
 							</Link>
 						</li>
 						<li>
-							<Link to={"/test"}>Test Error Boundary</Link>
+							<Link to='/test' className={active === "test" ? "active" : ""}>
+								Test Error Boundary
+							</Link>
 						</li>
 						<li>
-							<Link className='smooth-scroll'>About</Link>
+							<Link to='/nested' className={active === "nested" ? "active" : ""}>
+								Nested Components
+							</Link>
 						</li>
 					</ul>
 

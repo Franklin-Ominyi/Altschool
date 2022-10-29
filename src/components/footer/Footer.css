@@ -52,6 +52,7 @@
 	text-decoration: none;
 	color: #fff;
 	transition: color 0.5s ease;
+	font-size: 0.9rem;
 }
 
 .footer a:hover {
@@ -60,6 +61,7 @@
 
 .footer p {
 	color: #fff;
+	font-size: 0.9rem;
 }
 
 /*  */
@@ -96,5 +98,9 @@
 	.footer .flex .right .inner-right {
 		flex-direction: column;
 		gap: 15px;
+	}
+
+	.footer p {
+		text-align: center;
 	}
 }

@@ -1,0 +1,48 @@
+.error-component *:not(i) {
+	font-family: "Raleway", sans-serif;
+}
+
+.error-component {
+	background-color: rgba(0, 0, 0, 0.9);
+	height: 100vh;
+	width: 100%;
+	color: #fff;
+	position: relative;
+}
+
+.error-component .error-component-card {
+	width: 420px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 40px 20px;
+	border-radius: 8px;
+	background-color: #fff;
+	box-shadow: 0px 4px 2px #fff;
+	color: black;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.error-component .error-component-title {
+	text-align: center;
+	font-size: 20px;
+	color: #ed1c24;
+}
+
+.error-component .error-component-desc {
+	text-align: center;
+	font-size: 17px;
+}
+.error-component .logo-container {
+	display: flex;
+	justify-content: center;
+}
+
+@media screen and (max-width: 760px) {
+	.error-component .error-component-card {
+		width: 90%;
+	}
+}

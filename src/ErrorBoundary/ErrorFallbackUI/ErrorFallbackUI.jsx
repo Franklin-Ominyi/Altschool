@@ -10,9 +10,9 @@ export default function ErrorFallbackUI() {
 					<img alt='logo' src={logo} height='50px' />
 				</div>
 
-				<p className='error-fallbackui-title error'>Site is temporary down</p>
+				<p className='error-fallbackui-title '>Site is temporary down</p>
 
-				<p className='error-fallbackui-desc error'>
+				<p className='error-fallbackui-desc '>
 					Dear esteemed customer, we are sorry to inform you that our site is
 					temporary down due to technical issues, which our engineering team is
 					already tackling. We are sorry for any inconvenices this might cause you.

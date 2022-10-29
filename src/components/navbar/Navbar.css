@@ -96,6 +96,14 @@ ul li {
 	padding: 10px;
 }
 
+.sidebar a.active {
+	color: #ed1c24;
+}
+
+.sidebar a.active:hover {
+	color: #fff;
+}
+
 .show {
 	left: 0;
 }

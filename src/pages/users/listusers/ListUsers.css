@@ -50,3 +50,19 @@
 .list-users .pagination-wrapper {
 	margin-top: 25px;
 }
+
+@media screen and (max-width: 760px) {
+	.list-users {
+		width: 96%;
+		overflow-x: hidden;
+	}
+	.list-users h2 {
+		font-size: 20px;
+	}
+	.list-users p {
+		font-size: 16px;
+	}
+	.list-users p:last-child {
+		font-size: 14px;
+	}
+}
