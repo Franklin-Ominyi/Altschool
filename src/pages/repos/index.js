@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
-import "./Users.css";
-import Footer from "../../components/footer/Footer";
+import "./Repos.css";
+
 import Navbar from "../../components/navbar/Navbar";
-import ListUsers from "./listusers/ListUsers";
+
+import ListRepos from "./listrepos/ListRepos";
 
 export default function Users() {
 	useEffect(() => {
@@ -12,9 +13,8 @@ export default function Users() {
 
 	return (
 		<div className='users'>
-			<Navbar active={"users"} />
-			<ListUsers />
-			<Footer />
+			<Navbar />
+			<ListRepos />
 		</div>
 	);
 }

@@ -15,9 +15,10 @@ ul li {
 	transition: top 0.5s ease;
 }
 
-.nav-container img {
-	height: 70px;
-	width: 70px;
+.nav-container .brand a {
+	color: #ed1c24;
+	font-weight: 600;
+	font-size: 25px;
 }
 
 .nav-container .wrapper {
@@ -25,7 +26,7 @@ ul li {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 90%;
+	width: 80%;
 }
 
 .nav-links {
@@ -46,31 +47,6 @@ ul li {
 
 .nav-links li a.active {
 	color: #ed1c24;
-}
-
-.nav-btn {
-	outline: none;
-	border-radius: 40px;
-	padding: 15px;
-	border: none;
-	background-color: black;
-	color: white;
-	transition: background-color 0.7s ease;
-	cursor: pointer;
-}
-
-.nav-btn:first-child {
-	background-color: white;
-	color: black;
-	margin-right: 4px;
-}
-
-.nav-btn:hover {
-	background-color: #ed1c24;
-}
-
-.nav-btn:first-child:hover {
-	color: white;
 }
 
 .sidebar {
@@ -102,6 +78,14 @@ ul li {
 
 .sidebar a:hover {
 	background-color: #ed1c24;
+}
+
+.sidebar a.active {
+	color: #ed1c24;
+}
+
+.sidebar a.active:hover {
+	color: white;
 }
 
 .mobile-menu {

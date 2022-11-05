@@ -1,8 +1,7 @@
 .list-users {
-	width: 80%;
+	width: 100%;
 	margin: 0 auto;
 	position: relative;
-	top: 4rem;
 	min-height: 60vh;
 	margin-bottom: 7rem;
 	height: auto;
@@ -20,31 +19,39 @@
 }
 
 .list-users h2 {
-	color: rgb(1, 1, 34);
+	/* color: rgb(1, 1, 34); */
+	color: blue;
 	font-size: 25px;
 }
 
 .list-users .list-item {
 	padding: 10px;
+	border-radius: 8px;
 	background-color: #ddd;
 	margin-bottom: 15px;
 	display: flex;
 	align-items: center;
 	gap: 10px;
+	transition: color 0.7s ease;
 }
 
-.list-users .list-item img {
-	border-radius: 50%;
+.list-users .list-item p a {
+	color: #ed1c24;
+}
+
+.list-users .list-item p a:hover {
+	color: #9d6062;
 }
 
 .list-users .list-item p {
-	color: black;
+	color: white;
 	font-weight: bold;
 }
 
-.list-users .list-item .email {
-	color: gray;
+.list-users .list-item .date {
+	color: black;
 	font-weight: 600;
+	margin-top: 10px;
 }
 
 .list-users .pagination-wrapper {

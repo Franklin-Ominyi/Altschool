@@ -2,9 +2,8 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import "./Pagination.css";
 
-function Pagination({ page, setPage, loading }) {
+function Pagination({ page, setPage, loading, total }) {
 	const [index, setIndex] = useState(page);
-	const [total, setTotal] = useState(1000);
 	const [indexForNumbers, setIndexForNumbers] = useState(index);
 	const [indexIsTotal, setIndexIsTotal] = useState(() => {
 		return indexForNumbers === total ? true : false;

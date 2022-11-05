@@ -1,0 +1,65 @@
+.nested-components {
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+	top: 4rem;
+	min-height: 100vh;
+	margin-bottom: 7rem;
+	height: auto;
+}
+
+.nested-components .top-bar {
+	background-color: #fff;
+	display: flex;
+	width: 80%;
+	margin: 0 auto;
+	justify-content: space-between;
+
+	align-items: center;
+	border: 2px solid #ed1c24;
+	border-radius: 8px;
+}
+
+.nested-components .top-bar a {
+	width: 100%;
+	padding: 10px;
+	transition: background-color 0.7s ease-in-out;
+	border-radius: 8px;
+}
+
+.nested-components .top-bar a:not(.nested-components .top-bar:last-child) {
+	border-right: 2px solid #ddd;
+}
+
+.nested-components .top-bar .active {
+	color: #fff;
+	background-color: #000;
+}
+.nested-components .top-bar a:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+.nested-components .card {
+	margin-top: 3.5rem;
+	border: 2px solid #ed1c24;
+	height: 200px;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.nested-components .outlet-wrapper {
+	margin-top: 2rem;
+}
+
+@media screen and (max-width: 760px) {
+	.nested-components {
+		width: 90%;
+	}
+
+	.nested-components .top-bar {
+		width: 100%;
+	}
+}

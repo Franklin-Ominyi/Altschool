@@ -12,9 +12,6 @@ const Navbar = ({ active }) => {
 
 	useEffect(() => {
 		document
-			.querySelector(".sidebar .smooth-scroll")
-			.addEventListener("click", toggleNavDisplay);
-		document
 			.querySelector(".mobile-menu")
 			.addEventListener("click", toggleNavDisplay);
 	}, []);
@@ -25,23 +22,15 @@ const Navbar = ({ active }) => {
 				<a href='/' className={active === "home" ? "active" : ""}>
 					Home
 				</a>
-				<Link to='/users' className={active === "users" ? " active" : ""}>
-					Users
+				<Link to={"/nested"} className={active === "nested" ? "active" : ""}>
+					Nested Routes
 				</Link>
 				<Link to={"/test"}>Test Error Boundary</Link>
-				<Link className='smooth-scroll'>About</Link>
 			</div>
 			<nav className='nav-container navbar'>
 				<div className='wrapper'>
-					<div className='brand-logo'>
-						<h1
-							className='semi-bold'
-							style={{ color: "#ed1c24", fontSize: "1.4rem" }}
-						>
-							<Link to='/'>
-								<img src={logo} alt='logo' />
-							</Link>
-						</h1>
+					<div className='brand'>
+						<Link to='/'>Github Profile Finder</Link>
 					</div>
 					<ul className='desktop nav-links'>
 						<li>
@@ -49,23 +38,17 @@ const Navbar = ({ active }) => {
 								Home
 							</Link>
 						</li>
+
 						<li>
-							<Link to={"/users"} className={active === "users" ? "active" : ""}>
-								Users
+							<Link to='/nested' className={active === "nested" ? " active" : ""}>
+								Nested Routes
 							</Link>
 						</li>
+
 						<li>
 							<Link to={"/test"}>Test Error Boundary</Link>
 						</li>
-						<li>
-							<Link className='smooth-scroll'>About</Link>
-						</li>
 					</ul>
-
-					<div className='desktop nav-cta-buttons'>
-						<button className='nav-btn'>Login</button>
-						<button className='nav-btn'>Register</button>
-					</div>
 
 					<div className='mobile-menu'>
 						{!toggleShowNav && <i className='fa fa-bars' aria-hidden='true'></i>}
