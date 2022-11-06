@@ -1,19 +1,59 @@
 import React, { useEffect } from "react";
 import "./Home.css";
-
 import Navbar from "../../components/navbar/Navbar";
 import { useContext } from "react";
 import { AppContext } from "../../components/context/AppContext";
 import { Details } from "../details";
-import ListRepos from "../repos/listrepos/ListRepos";
+import ListRepos from "../listrepos/ListRepos";
+import swal from "sweetalert";
 
 const Home = () => {
 	useEffect(() => {
 		document.body.scrollTop = 0;
 		document.documentElement.scrollTop = 0;
 	}, []);
-	const { searchInput, setSearchInput, fetchUser, loading, data, repoData } =
-		useContext(AppContext);
+	const {
+		searchInput,
+		setSearchInput,
+		fetchUser,
+		loading,
+		data,
+		loading2,
+		repoData,
+		setError,
+		error,
+	} = useContext(AppContext);
+
+	if (error) {
+		if (error.message == "Request failed with status code 404") {
+			swal({
+				title: "Oops",
+				text: "The username does not exit",
+				icon: "error",
+				closeOnClickOutside: false,
+			}).then((ok) => {
+				if (ok) {
+					setError(null);
+				} else {
+					return;
+				}
+			});
+		} else {
+			swal({
+				title: "Oops",
+				text: error.message,
+				icon: "error",
+				closeOnClickOutside: false,
+			}).then((ok) => {
+				if (ok) {
+					setError(null);
+				} else {
+					return;
+				}
+			});
+		}
+	}
+
 	return (
 		<div className='home'>
 			<Navbar active={"home"} />
@@ -47,8 +87,8 @@ const Home = () => {
 						</span>
 					)}
 				</main>
-				{!loading && data && <Details />}
-				{!loading && repoData && <ListRepos />}
+				{!loading && data && !error && <Details />}
+				{!loading && !loading2 && data && Boolean(repoData) && <ListRepos />}
 			</section>
 		</div>
 	);

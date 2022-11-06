@@ -104,4 +104,8 @@ ul li {
 	.nav-container .wrapper {
 		margin: 10px auto;
 	}
+
+	.nav-container .brand a {
+		font-size: 18px;
+	}
 }

@@ -4,11 +4,12 @@ import { createContext, useEffect, useState } from "react";
 export const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
-	const [data, setData] = useState([]);
+	const [data, setData] = useState(null);
 	const [loading, setLoading] = useState(false);
 	const [loading2, setLoading2] = useState(false);
 	const [page, setPage] = useState(1);
 	const [error, setError] = useState(null);
+	const [error2, setError2] = useState(null);
 	const [searchInput, setSearchInput] = useState("");
 	const [repoData, setRepoData] = useState(null);
 
@@ -16,6 +17,8 @@ export const AppContextProvider = ({ children }) => {
 		setData(null);
 		setRepoData(null);
 		setPage(1);
+		setError(null);
+		setError2(null);
 	}, [searchInput]);
 
 	const fetchUser = async () => {
@@ -25,9 +28,9 @@ export const AppContextProvider = ({ children }) => {
 			let response = await axios.get(URL);
 			setData(response.data);
 			setLoading(false);
-			console.log(response.data);
 		} catch (error) {
-			setData([]);
+			setRepoData(null);
+			setData(null);
 			setError(error);
 			setLoading(false);
 		}
@@ -36,13 +39,12 @@ export const AppContextProvider = ({ children }) => {
 	const getRepos = async () => {
 		setLoading2(true);
 		try {
-			let response = await axios.get(`${data.repos_url}?page=${page}`);
+			let response = await axios.get(`${data.repos_url}?per_page=10&page=${page}`);
 			setRepoData(response.data);
 			setLoading2(false);
-			console.log(response.data);
 		} catch (error) {
 			setRepoData(null);
-			setError(error);
+			setError2(error);
 			setLoading2(false);
 		}
 	};
@@ -63,10 +65,13 @@ export const AppContextProvider = ({ children }) => {
 				setPage,
 				fetchUser,
 				error,
+				setError,
 				searchInput,
 				setSearchInput,
 				getRepos,
 				repoData,
+				error2,
+				setError2,
 			}}
 		>
 			{children}

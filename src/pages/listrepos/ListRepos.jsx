@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useContext } from "react";
-import { AppContext } from "../../../components/context/AppContext";
+import { AppContext } from "../../components/context/AppContext";
 // import Loader from "../../../components/loader";
-import Pagination from "../../../components/pagination";
+import Pagination from "../../components/pagination";
 import "./ListRepos.css";
 
 export default function ListRepos() {
@@ -15,8 +15,9 @@ export default function ListRepos() {
 				<h2>Repositories</h2>
 				<p>Page {page}</p>
 			</div>
-			{/* {loading2 && !repoData && <Loader />} */}
-			{repoData &&
+
+			{!loading2 &&
+				Boolean(repoData) &&
 				repoData?.map((item, index) => (
 					<div className='list-item' key={index}>
 						<div>
@@ -33,13 +34,13 @@ export default function ListRepos() {
 						</div>
 					</div>
 				))}
-			{data?.public_repos > 30 && (
+			{data?.public_repos > 10 && (
 				<div className='pagination-wrapper'>
 					<Pagination
 						page={page}
 						setPage={setPage}
 						loading={loading}
-						total={Math.round(data?.public_repos / 30)}
+						total={Math.round(data?.public_repos / 10)}
 					/>
 				</div>
 			)}
