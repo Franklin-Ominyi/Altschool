@@ -39,7 +39,9 @@ export const AppContextProvider = ({ children }) => {
 	const getRepos = async () => {
 		setLoading2(true);
 		try {
-			let response = await axios.get(`${data.repos_url}?per_page=10&page=${page}`);
+			let response = await axios.get(
+				`${data.repos_url}?per_page=10&page=${page}&sort=created`
+			);
 			setRepoData(response.data);
 			setLoading2(false);
 		} catch (error) {
