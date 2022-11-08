@@ -29,7 +29,7 @@ const Navbar = ({ active }) => {
 			<nav className='nav-container navbar'>
 				<div className='wrapper'>
 					<div className='brand'>
-						<Link to='/'>Github Profile Finder</Link>
+						<Link to='/'>Github Profiler</Link>
 					</div>
 					<ul className='desktop nav-links'>
 						<li>

@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useContext } from "react";
 import { AppContext } from "../../components/context/AppContext";
-// import Loader from "../../../components/loader";
 import Pagination from "../../components/pagination";
 import "./ListRepos.css";
 
